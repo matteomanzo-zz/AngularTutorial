@@ -5,10 +5,12 @@
     this.product = gem;
   });
 
-  var gem = {
+  var gems = {
       name: 'Dodecahedron',
       price: 2.95,
       description: 'This gem is a dodecahedron',
+      canPurchase: true,
+      soldOut: true,
   }
 
 })();
