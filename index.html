@@ -1,6 +1,7 @@
 <!doctype>
 <html ng-app="store">
   <head>
+    <meta charset='utf-8'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -8,7 +9,7 @@
   <body ng-controller='StoreController as store'>
     <div ng-repeat='product in store.product'>
       <h1>{{product.name}}</h1>
-      <h2>{{product.price}}</h2>
+      <h2>{{product.price | currency : "£"}}</h2>
       <p>{{product.description}}</p>
       <button ng-show='product.canPurchase'>Add to Cart</button>
     </div>
