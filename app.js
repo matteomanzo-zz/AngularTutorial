@@ -2,7 +2,7 @@
   var app = angular.module('store', [ ]);
 
   app.controller('StoreController', function(){
-    this.product = gems;
+    this.products = gems;
   });
 
   var gems = [
@@ -12,6 +12,11 @@
       description: 'This gem is a dodecahedron',
       canPurchase: true,
       soldOut: true,
+      images:[
+        {
+          full: 'http://paulscottinfo.ipage.com/polyhedra/platonic/dodecahedron/1dodecahedronL.gif'
+        }
+      ]
     },
 
     {
